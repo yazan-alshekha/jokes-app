@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>joke datails</title>
+</head>
+
+<body>
+
+    <% array.forEach((item)=>{ %>
+
+        <p>
+            <%= item.type%>
+        </p>
+        <p>
+            <%= item.setup%>
+        </p>
+        <p>
+            <%= item.punchline%>
+        </p>
+        <form action="/delete/<%= item.id%>?_method=delete" method="POST">
+            <button>delete</button>
+        </form>
+
+        <button id='show'>update</button>
+
+        <section>
+            <form action="/update/<%= item.id%>?_method=update" method="POST">
+                <input type="text" name='type' value="<%= item.type%>">
+                <input type="text" name='setup' value="<%= item.setup%>">
+                <input type="text" name='punchline' value="<%= item.punchline%>">
+                <button>update data</button>
+            </form>
+        </section>
+
+
+
+        <% }); %>
+
+
+</body>
+
+</html>

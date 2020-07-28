@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random jokes</title>
+</head>
+
+<body>
+
+    <ul>
+        <% array.forEach((item)=>{ %>
+            <li>
+                <p>
+                    <%= item.type%>
+                </p>
+                <p>
+                    <%= item.setup%>
+                </p>
+                <p>
+                    <%= item.punchline%>
+                </p>
+
+            </li>
+            <% }); %>
+
+    </ul>
+
+
+
+</body>
+
+</html>

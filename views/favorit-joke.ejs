@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>favorit joke</title>
+</head>
+
+<body>
+    <h2>jokes bout us</h2>
+
+    <ul>
+        <% array.forEach((item)=>{ %>
+            <li>
+                <p>
+                    <%= item.type%>
+                </p>
+                <p>
+                    <%= item.setup%>
+                </p>
+                <p>
+                    <%= item.punchline%>
+                </p>
+                <form action="/view-details/<%= item.id%>" method="post">
+
+                    <button>View-Details</button>
+                </form>
+            </li>
+            <% }); %>
+
+    </ul>
+
+</body>
+
+</html>

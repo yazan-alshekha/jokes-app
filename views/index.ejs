@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home page</title>
+</head>
+
+<body>
+    <h1>home page</h1>
+    <a href="/random-joke">random joke</a>
+
+    <ul>
+        <% array.forEach((item)=>{ %>
+            <li>
+                <form method="post" action="/add">
+                    <p>
+                        <%= item.type %>
+                    </p>
+                    <p>
+                        <%= item.setup%>
+                    </p>
+                    <p>
+                        <%= item.punchline%>
+                    </p>
+
+                    <button>add to my joke list</button>
+                </form>
+
+            </li>
+
+            <% }); %>
+
+    </ul>
+</body>
+
+</html>
